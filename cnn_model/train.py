@@ -23,7 +23,7 @@ parser.add_argument('--dir_path', type=str, default='../data/cifar-100-data/', h
 
 args = parser.parse_args()
 os.environ["CUDA_VISIBLE_DEVICES"] = '0'
-dir_path = '../data/cifar-100-data/'  # data path
+dir_path = args.dir_path  # data path
 
 total, correct = 0, 0
 model = Cifar100Net().cuda()
