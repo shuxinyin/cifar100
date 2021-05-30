@@ -3,11 +3,11 @@ a simple cnn image-classification modules self-implemented tested on database ci
 
 
 ## simple cnn model
-all the code in dir cnn_model
-first you have to download the cofar100 data(link can easy be found in net), download the data in the your local path.  
- example: you put the data in path: D:/CifarPicture_Classication/data/  
+all the code of cnn classification in dir cnn_model  
+**first** you have to download the cifar100 data(link can easy be found in net), download the data in the your local path.  
+ example: you put the data in path: **D:/CifarPicture_Classication/data/** 
  
-then can easy run the project by the shell command
+**then** can easy run the project by the shell command
 ```shell
 python train.py --dir_path D:/CifarPicture_Classication/data/
 ```
