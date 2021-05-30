@@ -12,7 +12,6 @@ from torch.utils.data import Dataset, DataLoader
 from data_set import Cifar100
 from cifarmodel import Cifar100Net
 
-
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--epochs', type=int, default=2, help='epoch size')
@@ -20,19 +19,17 @@ parser.add_argument('--step_size', type=int, default=5, help='step size')
 parser.add_argument('--batch_size', type=int, default=64, help='batch size')
 parser.add_argument('--lr', type=float, default=1e-3, help='learning rate')
 parser.add_argument('--weight_decay', type=float, default=0.0, help='weight_decay')
+parser.add_argument('--dir_path', type=str, default='../data/cifar-100-data/', help='dir_path')
 
 args = parser.parse_args()
 os.environ["CUDA_VISIBLE_DEVICES"] = '0'
-dirname = '../data/cifar-100-data/'  # data path
-
-
+dir_path = '../data/cifar-100-data/'  # data path
 
 total, correct = 0, 0
 model = Cifar100Net().cuda()
 
-
-train_dataset = Cifar100(dirname, train=True)
-test_dataset = Cifar100(dirname, train=False)
+train_dataset = Cifar100(dir_path, train=True)
+test_dataset = Cifar100(dir_path, train=False)
 
 train_dataloder = DataLoader(train_dataset, batch_size=args.batch_size,
                              num_workers=0)
