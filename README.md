@@ -1,2 +1,2 @@
 # cifar100
-some popular modules self-implemented tested on database cifar100 based on pytorch 
+a simple cnn image-classification modules self-implemented tested on database cifar100 based on pytorch 
